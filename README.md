@@ -1,2 +1,2 @@
 # Our beloved dragoon
-password: H0wd3!
+password: h0wd3!
