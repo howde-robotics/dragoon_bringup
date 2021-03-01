@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.2)
-project(dragoon_bringup VERSION 0.0.1)
+project(dragoon_bringup)
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++17 -pthread")
 
 find_package(catkin REQUIRED COMPONENTS
