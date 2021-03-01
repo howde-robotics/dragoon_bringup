@@ -1,0 +1,16 @@
+<!-- -*- mode: XML -*- -->
+<!-- run velodyne_pointcloud/TransformNodelet in a nodelet manager for a VLP-16 -->
+
+<launch>
+
+  <!-- start velodyne driver -->
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+  </include>
+
+  <!-- start velodyne laserscan node -->
+  <node pkg="velodyne_laserscan" type="velodyne_laserscan_node" name="velodyne_laserscan_node" output="screen">
+    <param name="ring" value="-1" type="int"/>
+    <param name="resolution" value="0.007" type ="double"/>
+  </node>
+
+</launch>
