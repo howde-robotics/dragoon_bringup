@@ -14,6 +14,7 @@
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>tf</depend>
+  <depend>imu_transformer</depend>
   <depend>actionlib_msgs</depend>
 
   <exec_depend>message_generation</exec_depend>
