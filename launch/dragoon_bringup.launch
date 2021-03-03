@@ -3,11 +3,30 @@
 
 <launch>
 
-  <!-- start velodyne driver -->
+  <node pkg="tf" type="static_transform_publisher" name="camera_base_link"
+        args="0 0 0 0 0 0 base_link camera_base_link 10" output="screen"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_lidar"
+        args="0 0 0 0 0 0 base_link horizontal_laser_link 10" output="screen"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_imu_link"
+        args="0 0 0 0 0 0 base_link imu_link 10" output="screen"/>
+
+  <!-- realsense d435i -->
+  <include file="$(find dragoon_bringup)/launch/include/realsense.launch">
+  </include>
+  
+  <node pkg="imu_coordinate_transformer" type="imu_coordinate_transformer" name="imu_coordinate_transformer" output="screen"/>
+
+  <!-- imu transformer
+  <include file="$(find dragoon_bringup)/launch/include/imu_transformer.launch">
+  </include>
+ -->
+  <!-- velodyne driver -->
   <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+    <arg name="device_ip" value="192.168.1.201" />
+    <arg name="frame_id" value="horizontal_laser_link" />
   </include>
 
-  <!-- start velodyne laserscan node -->
+  <!-- velodyne laserscan node -->
   <node pkg="velodyne_laserscan" type="velodyne_laserscan_node" name="velodyne_laserscan_node" output="screen">
     <param name="ring" value="-1" type="int"/>
     <param name="resolution" value="0.007" type ="double"/>
