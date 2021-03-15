@@ -100,9 +100,4 @@
       <arg name="allow_no_texture_points"  value="$(arg allow_no_texture_points)"/>
     </include>
   </group>
-
-  <!-- Loads the camera model -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find dragoon_bringup)/urdf/realsense.urdf.xacro' use_nominal_extrinsics:=false"/>
-
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 </launch>
