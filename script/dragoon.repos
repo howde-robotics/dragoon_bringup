@@ -1,0 +1,21 @@
+repositories:
+  dragoon_bringup:
+    type: git
+    url: https://github.com/howde-robotics/dragoon_bringup.git
+    version: master
+  perception/darknet_ros:
+    type: git
+    url: https://github.com/kunaltyagi/darknet_ros.git
+    version: opencv4
+  sensing/imu_coordinate_transformer:
+    type: git
+    url: https://github.com/howde-robotics/imu_coordinate_transformer.git
+    version: master
+  sensing/velodyne:
+    type: git
+    url: https://github.com/ros-drivers/velodyne.git
+    version: master
+  sensing/vision_opencv:
+    type: git
+    url: https://github.com/fizyr-forks/vision_opencv.git
+    version: opencv4
