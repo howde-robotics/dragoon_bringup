@@ -10,6 +10,10 @@
   <!-- imu coordinate transformer -->
   <node pkg="imu_coordinate_transformer" type="imu_coordinate_transformer" name="imu_coordinate_transformer" output="screen"/>
 
+  <!-- Seek Thermal driver -->
+  <node pkg="seek_driver" type="seek_driver" name="seek_driver">
+  </node>
+
   <!-- velodyne driver -->
   <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
     <arg name="device_ip" value="192.168.1.201" />
@@ -21,8 +25,8 @@
     <param name="ring" value="-1" type="int"/>
     <param name="resolution" value="0.007" type ="double"/>
   </node>
-  
-  <!-- RVIZ -->
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find dragoon_bringup)/rviz/dragoon_rviz.rviz" />
 
+  <!-- RVIZ 
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find dragoon_bringup)/rviz/dragoon_rviz.rviz" />
+-->
 </launch>
