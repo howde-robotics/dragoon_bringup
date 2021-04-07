@@ -18,15 +18,10 @@
   <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
     <arg name="device_ip" value="192.168.1.201" />
     <arg name="frame_id" value="horizontal_laser_link" />
+    <arg name="laserscan_resolution" value="0.0035" />
   </include>
 
-  <!-- velodyne laserscan node -->
-  <node pkg="velodyne_laserscan" type="velodyne_laserscan_node" name="velodyne_laserscan_node" output="screen">
-    <param name="ring" value="-1" type="int"/>
-    <param name="resolution" value="0.007" type ="double"/>
-  </node>
-
-  <!-- RVIZ 
+  <!-- RVIZ
   <node type="rviz" name="rviz" pkg="rviz" args="-d $(find dragoon_bringup)/rviz/dragoon_rviz.rviz" />
 -->
 </launch>

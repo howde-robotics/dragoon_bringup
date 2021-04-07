@@ -16,8 +16,8 @@
 
   <arg name="infra_width"        default="640"/>
   <arg name="infra_height"       default="480"/>
-  <arg name="enable_infra1"       default="true"/>
-  <arg name="enable_infra2"       default="true"/>
+  <arg name="enable_infra1"       default="false"/>
+  <arg name="enable_infra2"       default="false"/>
 
   <arg name="color_width"         default="640"/>
   <arg name="color_height"        default="480"/>
@@ -37,7 +37,7 @@
   <arg name="pointcloud_texture_index"  default="0"/>
 
   <arg name="enable_sync"               default="false"/>
-  <arg name="align_depth"               default="true"/>
+  <arg name="align_depth"               default="false"/>
 
   <arg name="filters"                   default="pointcloud"/>
   <arg name="clip_distance"             default="-2"/>
@@ -46,7 +46,7 @@
   <arg name="unite_imu_method"          default="linear_interpolation"/>
   <arg name="topic_odom_in"             default="odom_in"/>
   <arg name="calib_odom_file"           default=""/>
-  <arg name="publish_odom_tf"           default="true"/>
+  <arg name="publish_odom_tf"           default="false"/>
   <arg name="allow_no_texture_points"   default="false"/>
 
   <group ns="$(arg camera)">
