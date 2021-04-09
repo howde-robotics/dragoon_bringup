@@ -21,7 +21,11 @@
     <arg name="laserscan_resolution" value="0.0035" />
   </include>
 
+  <!-- Health Monitor -->
+  <include file="$(find dragoon_health_monitor)/launch/health_monitor.launch">
+  </include>
+
   <!-- RVIZ
   <node type="rviz" name="rviz" pkg="rviz" args="-d $(find dragoon_bringup)/rviz/dragoon_rviz.rviz" />
--->
+	-->
 </launch>
