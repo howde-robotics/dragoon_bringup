@@ -3,10 +3,26 @@ repositories:
     type: git
     url: https://github.com/howde-robotics/dragoon_bringup.git
     version: master
+  dragoon_health_monitor:
+    type: git
+    url: https://github.com/howde-robotics/dragoon_health_monitor.git
+    version: master
+  dragoon_messages:
+    type: git
+    url: https://github.com/howde-robotics/dragoon_messages.git
+    version: master
   perception/darknet_ros:
     type: git
     url: https://github.com/howde-robotics/darknet_ros.git
     version: opencv4
+  perception/detection_filter:
+    type: git
+    url: https://github.com/howde-robotics/detection_filter.git
+    version: master
+  perception/rgb_human_detection_node:
+    type: git
+    url: https://github.com/howde-robotics/RealSenseDev.git
+    version: master
   sensing/imu_coordinate_transformer:
     type: git
     url: https://github.com/howde-robotics/imu_coordinate_transformer.git
@@ -17,9 +33,17 @@ repositories:
     version: master
   sensing/velodyne:
     type: git
-    url: https://github.com/ros-drivers/velodyne.git
+    url: https://github.com/kangkelvin/velodyne.git
     version: master
   sensing/vision_opencv:
     type: git
     url: https://github.com/fizyr-forks/vision_opencv.git
     version: opencv4
+  visualizer:
+    type: git
+    url: https://github.com/howde-robotics/visualizer.git
+    version: master
+  wire:
+    type: git
+    url: https://github.com/howde-robotics/wire.git
+    version: master
