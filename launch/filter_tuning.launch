@@ -1,0 +1,21 @@
+<launch>
+
+    <param name="/use_sim_time" value="true">
+    </param>
+
+    <!-- <include file="$(find dragoon_bringup)/launch/include/rgb_human_detection.launch">
+    </include> -->
+
+    <!-- Wire core for kalman filtering -->
+    <include file="$(find wire_core)/launch/start.launch">
+    </include>
+
+    <!-- Detection filter -->
+    <include file="$(find dragoon_bringup)/launch/include/detection_filter.launch">
+    </include>
+
+    <!-- Visualizer -->
+    <include file="$(find visualizer)/launch/visualizer.launch">
+    </include>
+
+</launch>
