@@ -1,5 +1,6 @@
 <launch>
     <arg name="detectionMaxThresh_" default="9" doc="beyond this distance, detection is ignored"/>
+    <!--arg name="detectionMaxThresh_" default="20" doc="beyond this distance, detection is ignored"/   for movement tracking only   -->
     <arg name="detectionMinThresh_" default="0.05" doc="below this distance, detection is ignored"/>
     <arg name="probabilityMinThresh_" default="0.4" doc="below this probability, detection is ignored"/>
 
