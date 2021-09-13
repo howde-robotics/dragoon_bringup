@@ -16,6 +16,7 @@
   <depend>tf</depend>
   <depend>imu_transformer</depend>
   <depend>actionlib_msgs</depend>
+  <depend>teb_local_planner</depend>
 
   <exec_depend>message_generation</exec_depend>
 
