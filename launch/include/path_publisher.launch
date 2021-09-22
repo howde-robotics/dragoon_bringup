@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg="dragoon_bringup" type="path_publisher" name="path_publisher" output="screen">
+    <param name="paths_directory" value="/home/dragoon/dragoon_system/src/dragoon_bringup/paths/"/>
+    <param name="path_frame_id" value="map"/>
+
+    <remap from="trajectory" to="trajectory"/>
+    <remap from="user_input_path" to="user_input_path"/>
+  </node>
+
+</launch>
