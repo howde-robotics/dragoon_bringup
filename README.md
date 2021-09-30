@@ -3,7 +3,7 @@ password: h0wd3!
 
 Important installation:
 
-## Darknet ros
+## Darknet ros [Not needed for us anymore]
 https://github.com/leggedrobotics/darknet_ros/issues/290
 
 https://github.com/ros-perception/vision_opencv/pull/259
