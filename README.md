@@ -42,23 +42,23 @@ Did it not work? FUCK. Let me guess, realsenseROS and realsenselib2 are complain
 
 Cool so remember theres like 45 things neccessary to get realsense running in ROS. Just kidding, its 2: `librealsense2` and `realsense-ros`. Both have packages available through `apt-get` so this should be easy right? Why is it always fucking up? 
 
-Welp here's what happened for us: We had locally installed versions of `librealsense` that were different than the most recent repo from `apt-get` install. Different versions of `realsense-ros` require specific different versions of `librealsense2`. If you have a local installation of `librealsense2` installed sneakily on your system, it's gonna throw a wrench in everything. Turns out thats what we had: `librealsense2-v2.4.4` was sneakily living installed on our system, while the apt-installs were repeatedly bring on `librealsense-v2.49` and the *its* compatible `realsense-ros` version. However, `realsense-ros` would then get built using the sneaky `v2.44` and everything broke. 
+Welp here's what happened for us: We had locally installed versions of `librealsense` that were different than the most recent repo from `apt-get` install. Different versions of `realsense-ros` require specific different versions of `librealsense2`. If you have a local installation of `librealsense2` installed sneakily on your system, it's gonna throw a wrench in everything. Turns out thats what we had: `librealsense2-v2.44` was sneakily living installed on our system, while the apt-installs were repeatedly bring on `librealsense-v2.49` and the *its* compatible `realsense-ros` version. However, `realsense-ros` would then get built using the sneaky `v2.44` and everything broke. 
 
 ```
 sudo apt install mlocate
 mlocate librealsense2
 ```
 
-Do you see a bunch of things like `librealsense2.44.so*` or whatever showing in `/usr/lib` or other important system directories? Then you probabyly also have a sneaky install of `librealsense` on your system. Great. I guess ne option is to uninstall that and reinstall the librealsense stuff from apt-get. I didn't do that. I did:
+Do you see a bunch of things like `librealsense2.44.so*` or whatever showing in `/usr/lib` or other important system directories? Then you probabyly also have a sneaky install of `librealsense` on your system. Great. I guess one option is to uninstall that and reinstall the librealsense stuff from apt-get. I didn't do that. I did:
 
 ### Tear it all up
 
 Idk which of these are neccessary
 ```
 sudo apt-get remove librealsense2-dkms
-sudo apt-get install librealsense2-utils
-sudo apt-get install librealsense2-dev
-sudo apt-get install librealsense2-dbg
+sudo apt-get remove librealsense2-utils
+sudo apt-get remove librealsense2-dev
+sudo apt-get remove librealsense2-dbg
 ```
 
 If after that, you can still launch `realsense-viewer` from the command line, then you definitely have a sneaky install living on your system.. find the version of that sneaky install using the `locate` command above. Go to Intel's [realsense-ros release page](https://github.com/IntelRealSense/realsense-ros/tags) and click around until you find the verison compatible with `librealsense` installed on your system. Follow the [Jetson installation procedures](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md), but make sure to clone the correct version, don't just clone master!
