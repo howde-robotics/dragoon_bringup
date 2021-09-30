@@ -59,7 +59,10 @@ sudo apt-get remove librealsense2-dkms
 sudo apt-get remove librealsense2-utils
 sudo apt-get remove librealsense2-dev
 sudo apt-get remove librealsense2-dbg
+sudo apt-get remove ros-melodic-relsense2-camera
 ```
+
+There might be some other `ros-melodic-realsense2-camera` shit left around. I vaguely remember something about `udev` rules. Remove it.
 
 If after that, you can still launch `realsense-viewer` from the command line, then you definitely have a sneaky install living on your system.. find the version of that sneaky install using the `locate` command above. Go to Intel's [realsense-ros release page](https://github.com/IntelRealSense/realsense-ros/tags) and click around until you find the verison compatible with `librealsense` installed on your system. Follow the [Jetson installation procedures](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md), but make sure to clone the correct version, don't just clone master!
 
