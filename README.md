@@ -46,7 +46,7 @@ Welp here's what happened for us: We had locally installed versions of `libreals
 
 ```
 sudo apt install mlocate
-mlocate librealsense2
+locate librealsense2
 ```
 
 Do you see a bunch of things like `librealsense2.44.so*` or whatever showing in `/usr/lib` or other important system directories? Then you probabyly also have a sneaky install of `librealsense` on your system. Great. I guess one option is to uninstall that and reinstall the librealsense stuff from apt-get. I didn't do that. I did:
