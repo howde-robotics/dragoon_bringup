@@ -11,6 +11,10 @@ repositories:
     type: git
     url: https://github.com/howde-robotics/dragoon_messages.git
     version: master
+  navigation/m-explore:
+    type: git
+    url: https://github.com/howde-robotics/m-explore.git
+    version: melodic-devel
   navigation/pure_pursuit:
     type: git
     url: https://github.com/larics/pure_pursuit.git
@@ -31,6 +35,14 @@ repositories:
     type: git
     url: https://github.com/howde-robotics/yolov4-for-darknet_ros.git
     version: master
+  perception/yolov4_trt_ros:
+    type: git
+    url: https://github.com/howde-robotics/yolov4_trt_ros.git
+    version: master
+  realsense-ros:
+    type: git
+    url: https://github.com/howde-robotics/realsense-ros-2_2_24.git
+    version: main
   sensing/imu_coordinate_transformer:
     type: git
     url: https://github.com/howde-robotics/imu_coordinate_transformer.git
