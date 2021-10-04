@@ -8,6 +8,6 @@
     <rosparam file="$(find dragoon_bringup)/config/base_local_planner_params.yaml" command="load" />
 
     <!--param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /-->
-    <param name="controller_frequency" value="2.0" />
+    <param name="controller_frequency" value="4.0" />
   </node>
 </launch>

@@ -4,7 +4,11 @@
   </include>
 
   <!-- Pure Pursuit -->
-  <include file="$(find dragoon_bringup)/launch/include/pure_pursuit.launch">
+  <!--include file="$(find dragoon_bringup)/launch/include/pure_pursuit.launch">
+  </include-->
+
+  <!-- Move Base -->
+  <include file="$(find dragoon_bringup)/launch/include/dragoon_local_planner.launch">
   </include>
 
   <!-- Roboteq Motor Interface -->
