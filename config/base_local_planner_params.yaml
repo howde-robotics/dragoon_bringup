@@ -3,8 +3,8 @@ TrajectoryPlannerROS:
   min_vel_x: 0.1
   xy_goal_tolerance: 0.1
   yaw_goal_tolerance: 0.1
-  max_vel_theta: 0.8
-  min_in_place_vel_theta: 0.2
+  max_vel_theta: 0.7
+  min_in_place_vel_theta: 0.3
 
   meter_scoring: True
   global_frame_id: map
@@ -13,9 +13,9 @@ TrajectoryPlannerROS:
   acc_lim_x: 0.5
   acc_lim_y: 0.5
 
-  dwa: True
+  dwa: False
 
-  holonomic_robot: true
+  holonomic_robot: false
 
 TebLocalPlannerROS:
 
