@@ -11,5 +11,6 @@
     <param name="controller_frequency" value="20.0" />
     <param name="recovery_behavior_enabled" value="false" />
     <param name="max_planning_retries" value="3" />
+    <remap from="/cmd_vel" to= "/cmd_vel_move_base" />
   </node>
 </launch>
