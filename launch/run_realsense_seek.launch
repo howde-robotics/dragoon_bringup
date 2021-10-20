@@ -1,0 +1,9 @@
+<launch>
+    <!-- Realsense -->
+    <include file="$(find dragoon_bringup)/launch/include/realsense.launch">
+    </include>
+
+    <!-- Seek Thermal driver -->
+  <node pkg="seek_driver" type="seek_driver" name="seek_driver">
+  </node>
+</launch>
