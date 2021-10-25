@@ -1,23 +1,26 @@
 local_costmap:
-  # plugins: 
-  # #   - {name: static_layer, type: "costmap_2d::StaticLayer"}
-  #   - {name: obstacles,       type: "costmap_2d::VoxelLayer"}
-  #   # - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+  plugins: 
+    - {name: static_layer, type: "costmap_2d::StaticLayer"}
+    - {name: obstacles_layer, type: "costmap_2d::VoxelLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
   global_frame: map
   robot_base_frame: base_link
   update_frequency: 2.0
   publish_frequency: 2.0
-  static_map: false
+  # static_map: false
   rolling_window: true
-  width: 7.0
-  height: 7.0
+  width: 10.0
+  height: 10.0
   resolution: 0.05
-  inflation_radius: 0.25
-  cost_scaling_factor: 0.1
+
+  inflation_layer:
+    inflation_radius: 0.8
+    cost_scaling_factor: 1.0
 
   #observation_sources: vlp_pcl_sensor rs_pcl_sensor
-  observation_sources: laser_scan_sensor
+  obstacles_layer:
+    observation_sources: laser_scan_sensor
 
-  laser_scan_sensor: {sensor_frame: horizontal_laser_link, data_type: LaserScan, topic: scan, marking: true, clearing: true, max_obstacle_height: 2.0, min_obstacle_height: 0.0}
-  vlp_pcl_sensor: {sensor_frame: horizontal_laser_link, data_type: PointCloud2, topic: velodyne_points, marking: true, clearing: true, max_obstacle_height: 0.3, min_obstacle_height: 0.03}
-  rs_pcl_sensor: {sensor_frame: camera_depth_optical_frame, data_type: PointCloud2, topic: camera/depth/color/points, marking: true, clearing: true, max_obstacle_height: 0.3, min_obstacle_height: 0.03}
+    laser_scan_sensor: {sensor_frame: horizontal_laser_link, data_type: LaserScan, topic: scan, marking: true, clearing: true, max_obstacle_height: 2.0, min_obstacle_height: 0.0}
+    vlp_pcl_sensor: {sensor_frame: horizontal_laser_link, data_type: PointCloud2, topic: velodyne_points, marking: true, clearing: true, max_obstacle_height: 0.3, min_obstacle_height: 0.03}
+    rs_pcl_sensor: {sensor_frame: camera_depth_optical_frame, data_type: PointCloud2, topic: camera/depth/color/points, marking: true, clearing: true, max_obstacle_height: 0.3, min_obstacle_height: 0.1}
