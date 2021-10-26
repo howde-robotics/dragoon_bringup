@@ -1,11 +1,19 @@
 <launch>
   <!-- Path publisher for user-defined input -->
-  <include file="$(find dragoon_bringup)/launch/include/path_publisher.launch">
-  </include>
+  <!--include file="$(find dragoon_bringup)/launch/include/path_publisher.launch">
+  </include-->
 
   <!-- Pure Pursuit -->
   <!--include file="$(find dragoon_bringup)/launch/include/pure_pursuit.launch">
   </include-->
+
+  <!-- Dragoon Executive -->
+  <include file="$(find dragoon_bringup)/launch/include/executive.launch">
+  </include>
+
+  <!-- Exploration -->
+  <include file="$(find dragoon_bringup)/launch/include/explore_costmap.launch">
+  </include>
 
   <!-- Move Base -->
   <include file="$(find dragoon_bringup)/launch/include/dragoon_local_planner.launch">
