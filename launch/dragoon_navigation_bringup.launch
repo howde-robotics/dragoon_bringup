@@ -4,8 +4,8 @@
   </include-->
 
   <!-- Pure Pursuit -->
-  <!--include file="$(find dragoon_bringup)/launch/include/pure_pursuit.launch">
-  </include-->
+  <include file="$(find dragoon_bringup)/launch/include/pure_pursuit.launch">
+  </include>
 
   <!-- Dragoon Executive -->
   <include file="$(find dragoon_bringup)/launch/include/executive.launch">

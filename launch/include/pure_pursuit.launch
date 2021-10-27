@@ -11,9 +11,9 @@
     <param name="robot_frame_id" value="base_link"/>
     <param name="lookahead_frame_id" value="lookahead"/>
 
-    <remap from="path_segment" to="trajectory"/>
+    <remap from="path_segment" to="move_base/TrajectoryPlannerROS/global_plan"/>
     <remap from="odometry" to="odom"/>
-    <remap from="cmd_vel" to="cmd_vel"/>
+    <remap from="cmd_vel" to="cmd_vel_move_base"/>
   </node>
 
 </launch>
