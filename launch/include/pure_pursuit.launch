@@ -3,6 +3,7 @@
   <node pkg="pure_pursuit" type="pure_pursuit" name="pure_pursuit" output="screen">
     <param name="wheelbase" value="0.29"/>
     <param name="lookahead_distance" value="0.5"/>
+    <param name="max_linear_velocity" value="0.2"/>
     <param name="max_rotational_velocity" value="0.6"/>
     <param name="position_tolerance" value="0.1"/>
     <param name="acceleration" value="100"/>
