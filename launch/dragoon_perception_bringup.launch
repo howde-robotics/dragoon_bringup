@@ -1,0 +1,25 @@
+<launch>
+  <!-- RGB detection to relative location -->
+  <include file="$(find dragoon_bringup)/launch/include/rgb_human_detection.launch">
+  </include>
+
+  <!-- Thermal detection to relative location -->
+  <include file="$(find dragoon_bringup)/launch/include/thermal_human_detection.launch">
+  </include>
+
+  <!-- Wire core for kalman filtering -->
+  <include file="$(find wire_core)/launch/start.launch">
+  </include>
+
+  <!-- Detection filter -->
+  <include file="$(find dragoon_bringup)/launch/include/detection_filter.launch">
+  </include>
+
+  <!-- YOLO RGB -->
+  <include file="$(find dragoon_bringup)/launch/include/yolov4_trt_rgb.launch">
+  </include>
+
+  <!-- YOLO Thermal -->
+  <include file="$(find dragoon_bringup)/launch/include/yolov4_trt_thermal.launch">
+  </include>
+</launch>

@@ -4,7 +4,7 @@ local_costmap:
     - {name: obstacles_layer, type: "costmap_2d::VoxelLayer"}
     - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
   global_frame: map
-  robot_base_frame: base_link
+  robot_base_frame: nav_link
   update_frequency: 2.0
   publish_frequency: 2.0
   # static_map: false

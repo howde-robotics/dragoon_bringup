@@ -26,28 +26,4 @@
 	<arg name="error_thres" value="2.5" />
 	<arg name="monitor_rate" value="20" />
   </include>
-
-<!-- RGB detection to relative location -->
- <include file="$(find dragoon_bringup)/launch/include/rgb_human_detection.launch">
- </include>
-
-<!-- Thermal detection to relative location -->
- <include file="$(find dragoon_bringup)/launch/include/thermal_human_detection.launch">
- </include>
-
-<!-- Wire core for kalman filtering -->
-`<include file="$(find wire_core)/launch/start.launch">
- </include>
-
-<!-- Detection filter -->
- <include file="$(find dragoon_bringup)/launch/include/detection_filter.launch">
- </include>
-
-<!-- Cartographer -->
-<include file="$(find dragoon_bringup)/launch/include/dragoon_cartographer.launch">
-</include>
-
-  <!-- RVIZ
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find dragoon_bringup)/rviz/dragoon_rviz.rviz" />
-	-->
 </launch>

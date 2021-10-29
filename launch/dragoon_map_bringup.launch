@@ -1,0 +1,5 @@
+<launch>
+  <!-- Cartographer -->
+  <include file="$(find dragoon_bringup)/launch/include/dragoon_cartographer.launch">
+  </include>
+</launch>
