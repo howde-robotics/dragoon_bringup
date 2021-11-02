@@ -14,6 +14,16 @@ TrajectoryPlannerROS:
   acc_lim_y: 0.5
 
   dwa: False
+  allow_unknown: True
+  visualize_potential: False
+  use_dijkstra: True
+  use_quadratic: True
+  lethal_cost: 253
+  neutral_cost: 50
+  cost_factor: 3.0
+  publish_potential: True
+  orientation_mode: 0 # None=0, Forward=1, Interpolate=2, ForwardThenInterpolate=3, Backward=4, Leftward=5, Rightward=6
+  orientation_window_size: 1
 
   holonomic_robot: False
 
