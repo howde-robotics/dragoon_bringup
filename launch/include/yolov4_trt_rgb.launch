@@ -1,7 +1,7 @@
 <launch>
 	<arg name="show_image" default="False"/>
-	<arg name="training_name" default="rgb_custom_dataset_only_0"/>
-	<arg name="confidence_threshold" default="0.5"/>
+	<arg name="training_name" default="rgb_custom_plus_5000coco_0"/>
+	<arg name="confidence_threshold" default="0.65"/>
 
 	<!-- yolov4_trt_node -->
 	<node pkg="yolov4_trt_ros" type="trt_yolo_v4.py" name="yolov4_trt_node" output="screen">		

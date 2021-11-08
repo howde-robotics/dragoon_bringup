@@ -15,7 +15,7 @@ local_costmap:
 
   inflation_layer:
     inflation_radius: 0.5
-    cost_scaling_factor: 1.0
+    cost_scaling_factor: 1.5
 
   #observation_sources: vlp_pcl_sensor rs_pcl_sensor
   obstacles_layer:
